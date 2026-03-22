@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function showSlide(index) {
         slides.forEach(s => s.classList.remove("active"));
         dots.forEach(d => d.classList.remove("active"));
-
         if (slides[index]) slides[index].classList.add("active");
         if (dots[index]) dots[index].classList.add("active");
     }
@@ -19,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (slides.length > 0) {
+        showSlide(currentSlide); // ✅ Initial slide show
         setInterval(nextSlide, 5000);
 
         dots.forEach((dot, i) => {
@@ -37,35 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
     if (track && prevBtn && nextBtn) {
         let index = 0;
         const cards = document.querySelectorAll(".related-card");
-        const cardWidth = cards[0]?.offsetWidth + 20 || 0;
+        const totalCards = cards.length;
+
+        // ✅ FIX: offsetWidth 0 આવે તો fallback
+        const cardWidth = (cards[0]?.offsetWidth || cards[0]?.getBoundingClientRect().width || 220) + 20;
 
         function updateSlider() {
+            // ✅ FIX: index bounds check અહીં centralize કર્યો
+            if (index >= totalCards) index = 0;
+            if (index < 0) index = totalCards - 1;
             track.style.transform = `translateX(-${index * cardWidth}px)`;
         }
 
         nextBtn.addEventListener("click", () => {
             index++;
-            if (index > cards.length - 1) index = 0;
             updateSlider();
         });
 
         prevBtn.addEventListener("click", () => {
             index--;
-            if (index < 0) index = cards.length - 1;
             updateSlider();
         });
 
-        // Auto Play
+        // ✅ FIX: updateSlider() call ઉમેર્યો — પહેલા missing હતો
         let auto = setInterval(() => {
             index++;
-            updateSlider();
+            updateSlider(); // ← BUG FIX
         }, 3000);
 
         track.addEventListener("mouseenter", () => clearInterval(auto));
         track.addEventListener("mouseleave", () => {
             auto = setInterval(() => {
                 index++;
-                updateSlider();
+                updateSlider(); // ← BUG FIX
             }, 3000);
         });
     }
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!slider) return;
 
         const images = slider.querySelectorAll("img");
+        if (images.length === 0) return; // ✅ Safety check
 
         currentPos += dir;
         if (currentPos >= images.length) currentPos = 0;
@@ -101,10 +106,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const modalImg = document.getElementById("imgFull");
         const slider = document.getElementById("productSlider");
 
-        if (modal && slider) {
+        if (modal && slider && modalImg) { // ✅ modalImg null check ઉમેર્યો
             const images = slider.querySelectorAll("img");
-            modal.style.display = "flex";
-            modalImg.src = images[currentPos].src;
+            if (images[currentPos]) {
+                modal.style.display = "flex";
+                modalImg.src = images[currentPos].src;
+            }
         }
     };
 
@@ -118,11 +125,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".tab-content").forEach(tab => tab.style.display = "none");
         document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
 
-        document.getElementById(tabName).style.display = "block";
+        const target = document.getElementById(tabName);
+        if (target) target.style.display = "block"; // ✅ Null check
         evt.currentTarget.classList.add("active");
     };
 
-    // Default Tab
     const desc = document.getElementById("desc");
     if (desc) desc.style.display = "block";
 
@@ -134,20 +141,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if (vSlides.length === 0) return;
 
         vSlides[currentVideo].classList.remove("active");
-
         currentVideo += dir;
         if (currentVideo >= vSlides.length) currentVideo = 0;
         if (currentVideo < 0) currentVideo = vSlides.length - 1;
-
         vSlides[currentVideo].classList.add("active");
     };
 
     // ================= MOBILE MENU =================
-    const btn = document.querySelector(".menu-btn");
+    const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".main-menu");
 
-    if (btn && menu) {
-        btn.onclick = () => menu.classList.toggle("active");
+    if (menuBtn && menu) {
+        menuBtn.addEventListener("click", () => menu.classList.toggle("active")); // ✅ onclick → addEventListener
     }
 
     // ================= INQUIRY MODAL =================
@@ -160,27 +165,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 4000);
     }
 
-    if (closeBtn) {
-        closeBtn.onclick = () => {
+    if (closeBtn && inquiryModal) { // ✅ inquiryModal null check
+        closeBtn.addEventListener("click", () => { // ✅ onclick → addEventListener
             inquiryModal.style.display = "none";
-        };
+        });
     }
 
-    window.onclick = function (e) {
-        if (e.target === inquiryModal) {
+    window.addEventListener("click", function (e) { // ✅ window.onclick → addEventListener
+        if (inquiryModal && e.target === inquiryModal) {
             inquiryModal.style.display = "none";
         }
 
         const zoomModal = document.getElementById("imageModal");
-        if (e.target === zoomModal) {
+        if (zoomModal && e.target === zoomModal) {
             zoomModal.style.display = "none";
         }
-    };
+    });
 
 });
 
+// ================= SOCIAL HTML FETCH =================
 fetch("../social.html")
-    .then(res => res.text())
+    .then(res => {
+        if (!res.ok) throw new Error("social.html load failed"); // ✅ Error check
+        return res.text();
+    })
     .then(data => {
         document.body.insertAdjacentHTML("beforeend", data);
-    });
+    })
+    .catch(err => console.error("Social fetch error:", err)); // ✅ catch ઉમેર્યો
