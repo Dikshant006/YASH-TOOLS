@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Tools</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Font Awesome CDN (This was missing) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Pop-up Modal Container -->
+    <div id="inquiryModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+
+            <h3>Get A Free Quote</h3>
+            <p>Please fill out the form below and we will get back to you.</p>
+
+            <form id="popupForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== Start HEADER SECTION ========== -->
+    <section class="hero-section">
+        <div class="header-main">
+            <div class="header-left">
+                <!-- Check if the image path is correct -->
+                <img src="./imges/yash-tools.png" alt="Logo">
+            </div>
+            <div class="header-right">
+                <!-- Top Bar: Contact Info -->
+                <div class="header-right-top">
+                    <span class="phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <ul>
+                            <li><a href="tel:+911234567890">91 85303 00025</a></li>
+                        </ul>
+                    </span>
+                    <span class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <ul>
+                            <li><a href="mailto:YASHTOOLS1271@YAHOO.COM">YASHTOOLS1271@YAHOO.COM</a></li>
+                        </ul>
+                    </span>
+                </div>
+
+                <!-- Bottom Bar: Navigation & Social -->
+                <div class="header-right-bottom">
+                    <button class="menu-btn">MENU</button>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="../index.html">HOME</a></li>
+                            <li><a href="../about.html">ABOUT </a></li>
+                            <li><a href="../products.html">PRODUCT</a></li>
+                            <li><a href="../video.html">VIDEOS</a></li>
+                            <li><a href="../testimonial.html">TESTIMONIAL</a></li>
+                            <li><a href="../contact.html">CONTACT </a></li>
+                        </ul>
+                    </nav>
+                    <div class="share-links">
+                        <a href="https://www.facebook.com/share/r/18J8nbhRxW/"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a
+                            href="https://www.instagram.com/yashtools1271?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href="http://www.youtube.com/@JigneshPatel-jh5ii"><i class="fa-brands fa-youtube"></i></a>
+
+                    </div>
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-main-section">
+            <div class="main-slider">
+
+                <div class="hero-slide active">
+                    <h2 class="section-title">SMS Series Products</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="./imges/Boring-Tools.webp" alt="Boring Tools">
+                            <p>Boring Tools</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./imges/brazed-tungsten-carbide-turning-tools.webp" alt="Brazed Boring">
+                            <p>Brazed Boring</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./imges/cranked-knife-tools-500x500.webp" alt="Cranked Facing">
+                            <p>Cranked Facing</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./imges/straight-finishing-tools1.webp" alt="Straight Finishing">
+                            <p>Straight Finishing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <h2 class="section-title">SMS Series Products</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="./imges/parting-tools-250x250.webp" alt="Tool 5">
+                            <p> Parting Tools</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./imges/straight-finishing-tools1.webp" alt="Tool 6">
+                            <p>Brazed Boring</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./imges/cranked-knife-tools-500x500.webp" alt="Tool 7">
+                            <p>Cranked Knife</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End HEADER SECTION ========== -->
+    <!-- ========== Start description Section ========== -->
+    <section class="main-section">
+        <section class="about-company">
+            <div class="container">
+                <div class="description">
+
+                    <h2 class="main-title">
+                        Welcome To Yash Tools – Lathe Machine Cutting Tools Manufacturers in Ahmedabad, Bangalore,
+                        Chennai, India.
+                    </h2>
+
+                    <div class="desc-content">
+                        <p>
+                            Welcome to <strong>Yash Tools</strong>. Since our inception, we have been renowned as a
+                            leading pioneer in manufacturing and supplying of wide range of lathe machine cutting tools
+                            that are made with very high quality materials. The list of lathe cutting tools include
+                            <a href="./card/brazed-carbide-tools.html">Brazed Carbide Tools</a>, Facing & Turning Tool,
+                            <a href="./card/industrial-brazed-tools.html">Industrial Brazed
+                                Tools</a>, Straight Finishing Tool, <a href="./card/boring-tools.html">Boring Tool</a>,
+                            Machine Cutting Tool,
+                            <a href="./card/tungsten-carbide-tools.html">Tungsten Carbide Tool</a>, <a
+                                href="./card/carbide-cutting-tools.html">Carbide Cutting Tools</a>, Metal Cutting
+                            Tool, Engineering Cutting Tool, <a href="./card/internal-threading-tools.html">Thread
+                                Cutting Tool</a>, Cutting Tool
+                            Sets, <a href="./card/kenife-tools.html">Knife Tool</a>, Carbide Boring Tool, Carbide
+                            Inserts, Assembly Tool,
+                            Bending
+                            Tool, <a href="./card/turning-tools.html">Turning Tool</a> Holders, Lathe Accessories, <a
+                                href="./card/parting-tools.html">Parting Tool</a>,
+                            Precision Tool, Boring Bar Tool, <a href="./items/carbide-tools.html">Carbide Lathe
+                                Tools</a> etc.
+                        </p>
+
+                        <p>
+                            We take pride in saying that all our professional workers endeavour to give best results to
+                            our valuable clients. You can see that our entire products portfolio is made with vigorous
+                            quality check, as we do not compromise on quality at any cost. All our products are used in
+                            functions like turning, cutting, drilling, boring, threading, grooving, parting, milling and
+                            many other functions. Before taking any order for any lathe cutting tools manufacturing or
+                            supplying in Ahmedabad, Bangalore, Chennai, India, our professional team ensures that all
+                            the products undergo quality check and are made under serious supervision of our team
+                            leaders.
+                        </p>
+
+                        <p>
+                            We have employed team of experts, who are well educated and loyal towards performing their
+                            duties. They also take the responsibility to look into the matter appropriately, in case any
+                            quality issue comes up. We do business with many clients and have built a strong bond of
+                            trust and reliability with them. We respect their trust and in return offer them with
+                            exclusive quality client services.
+                        </p>
+
+                        <p>
+                            Our products are available in many varieties and different shapes and in addition they can
+                            be customized as per the needs and wants of the clients. It is through these commitments and
+                            ethics, today our business has reached heights and is looking forward to become a leading
+                            name in the lathe cutting tools manufacturing industry.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ========== End description Section ========== -->
+
+    <!-- ========== Start product Section ========== -->
+
+    <section class="our-products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-wrapper">
+
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/bar-turning-tool-250x250-1.webp" alt=""></div>
+                    <h4>Bar Turning Tools</h4>
+                    <a href="./card/bar-turning-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/Boring-Tools-300x300.webp" alt=""></div>
+                    <h4>Boring Tools</h4>
+                    <a href="./card/boring-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/brazed-tungsten-carbide-turning-tools-250x250-1.webp" alt="">
+                    </div>
+                    <h4>Brazed Boring Tools</h4>
+                    <a href="./card/brazed-boring-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/500-300x300.webp" alt=""></div>
+                    <h4>Brazed Carbide Tipped Tools</h4>
+                    <a href="./card/brazed-carbide-tipped-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i>
+                        Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/Carbide-Brazed-Tools-300x300.webp" alt=""></div>
+                    <h4>Brazed Carbide Tools</h4>
+                    <a href="./card/brazed-carbide-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i>
+                        Read More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/brazed-tungsten-carbide-turning-tools-250x250-1.webp" alt="">
+                    </div>
+                    <h4>Brazed Tungsten Carbide Turning Tools</h4>
+                    <a href="./card/brazed-tungsten-carbide-turning-tools.html" class="read-btn"><i
+                            class="fa-solid fa-plus"></i> Read More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/Carbide-Brazed-Turning-Tools-300x300.webp" alt=""></div>
+                    <h4>Brazed Turning Tools</h4>
+                    <a href="./card/brazed-turning-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/Carbide-Brazed-Turning-Tools-300x300 (1).webp" alt=""></div>
+                    <h4>Carbide Brazed Turning Tools</h4>
+                    <a href="./card/carbide-brazed-turning-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i>
+                        Read More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/external-threading-tools-300x300.webp" alt=""></div>
+                    <h4>Carbide Cutting Tools</h4>
+                    <a href="./card/carbide-cutting-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/chamfering-tools-500x500-300x300.webp" alt=""></div>
+                    <h4>Chamfering Tools</h4>
+                    <a href="./card/chamfering-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/Cranked-Facing-Tools-300x300.webp" alt=""></div>
+                    <h4>Cranked Facing Tools</h4>
+                    <a href="./card/cranked-facing-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+                <div class="p-card">
+                    <div class="p-img"><img src="./imges/cranked-knife-tools-500x500-300x300.webp" alt=""></div>
+                    <h4>Cranked Knife Tools</h4>
+                    <a href="./card/cranked-knife-tools.html" class="read-btn"><i class="fa-solid fa-plus"></i> Read
+                        More</a>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <button id="loadMoreBtn" class="btn-more">
+                    <a href="products.html">View More Products</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== End product Section ========== -->
+
+    <!-- ========== Start footer Section ========== -->
+
+    <footer class="footer-section">
+        <div class="get-in-touch">Get in Touch!</div>
+
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./products.html">Our Products</a></li>
+                    <li><a href="./video.html">Our Videos</a></li>
+                    <li><a href="./testimonials.html">Testimonial</a></li>
+                    <!-- <li><a href="sitemap.html">Sitemap</a></li> -->
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        66, Abhishrip Industrial Park, Opp. G.V.M.M.,
+                        S.P. Ring Road, Odhav, Ahmedabad – 382415, Gujarat, India
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        91 85303 00025
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 94094 13554
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        YASHTOOLS1271@YAHOO.COM
+                    </p>
+
+                </div>
+
+                <div class="follow-us">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/r/18J8nbhRxW/"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a
+                            href="https://www.instagram.com/yashtools1271?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <!-- <a href="#"><i class="fa-brands fa-pinterest-p"></i></a> -->
+                        <a href="http://www.youtube.com/@JigneshPatel-jh5ii"><i class="fa-brands fa-youtube"></i></a>
+                        <!-- <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> -->
+                        <!-- <a href="#"><i class="fa-brands fa-google-plus-g"></i></a> -->
+                        <!-- <a href="#"><i class="fa-brands fa-tumblr"></i></a> -->
+                        <!-- <a href="#"><i class="fa-brands fa-vimeo-v"></i></a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>MAP</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps?q=66,Abhishrip Industrial Park,Odhav,Ahmedabad&output=embed"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright 2026 Yash Tools. All Rights Reserved.</p>
+            <p>Website Design & SEO Company in Ahmedabad by WIT Solution</p>
+        </div>
+    </footer>
+
+    <!-- ========== End footer Section ========== -->
+
+
+    <script src="./JS/script.js"></script>
+    <!-- <script>
+        const menuIcon = document.querySelector(".menu-icon");
+        const menu = document.querySelector(".main-menu");
+
+        menuIcon.onclick = () => {
+            menu.classList.toggle("active");
+        };
+    </script> -->
+
+</body>
+
+</html>

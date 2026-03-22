@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <!-- Pop-up Modal Container -->
+    <div id="inquiryModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+
+            <h3>Get A Free Quote</h3>
+            <p>Please fill out the form below and we will get back to you.</p>
+
+            <form id="popupForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="header-left">
+            <!-- Check if the image path is correct -->
+            <img src="./imges/yash-tools.png" alt="Logo">
+        </div>
+        <div class="header-right">
+            <!-- Top Bar: Contact Info -->
+            <div class="header-right-top">
+                <span class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <ul>
+                        <li><a href="tel:+911234567890">91 85303 00025</a></li>
+                    </ul>
+                </span>
+                <span class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <ul>
+                        <li><a href="mailto:YASHTOOLS1271@YAHOO.COM">YASHTOOLS1271@YAHOO.COM</a></li>
+                    </ul>
+                </span>
+            </div>
+
+            <!-- Bottom Bar: Navigation & Social -->
+            <div class="header-right-bottom">
+                <button class="menu-btn">MENU</button>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../about.html">ABOUT </a></li>
+                        <li><a href="../products.html">PRODUCT</a></li>
+                        <li><a href="../video.html">VIDEOS</a></li>
+                        <li><a href="../testimonials.html">TESTIMONIAL</a></li>
+                        <li><a href="../contact.html">CONTACT </a></li>
+                    </ul>
+                </nav>
+                <div class="share-links">
+                    <a href="https://www.facebook.com/share/r/18J8nbhRxW/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a
+                        href="https://www.instagram.com/yashtools1271?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                            class="fa-brands fa-square-instagram"></i></a>
+                    <a href="http://www.youtube.com/@JigneshPatel-jh5ii"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <div class="container">
+            <h1>Videos </h1>
+        </div>
+    </div>
+    <section class="video-gallery container">
+        <div class="video-grid">
+            <!-- <div class="video-card">
+                <iframe src="https://youtube.com/shorts/21BCcsNHTXA?si=BwGTKdtjd5Q758zy" frameborder="0"
+                    allowfullscreen></iframe>
+                <h4>Product Demo 1</h4>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/shorts/7ifzvdNHsUA" frameborder="0" allowfullscreen></iframe>
+                <h4>Product Demo 2</h4>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/shorts/ekgkIw1VroU" frameborder="0" allowfullscreen></iframe>
+                <h4>Manufacturing Process</h4>
+            </div> -->
+
+            <div class="video-card">
+                <iframe src="./video/video-3.mp4" frameborder="0" allowfullscreen></iframe>
+                <h4>Quality Testing</h4>
+            </div>
+            <div class="video-card">
+                <iframe src="./video/video-1.mp4" frameborder="0" allowfullscreen></iframe>
+                <h4>Quality Testing</h4>
+            </div>
+            <div class="video-card">
+                <iframe src="./video/video-2.mp4" frameborder="0" allowfullscreen></iframe>
+                <h4>Quality Testing</h4>
+            </div>
+
+        </div>
+        <footer class="footer-section">
+            <div class="get-in-touch">Get in Touch!</div>
+
+            <div class="container footer-container">
+                <div class="footer-col">
+                    <h3>Quick links</h3>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./products.html">Our Products</a></li>
+                        <li><a href="./video.html">Our Videos</a></li>
+                        <li><a href="./testimonials.html">Testimonial</a></li>
+                        <!-- <li><a href="sitemap.html">Sitemap</a></li> -->
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            66, Abhishrip Industrial Park, Opp. G.V.M.M.,
+                            S.P. Ring Road, Odhav, Ahmedabad – 382415, Gujarat, India
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            91 85303 00025
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            +91 94094 13554
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            YASHTOOLS1271@YAHOO.COM
+                        </p>
+
+                    </div>
+
+                    <div class="follow-us">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/share/r/18J8nbhRxW/"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.instagram.com/yashtools1271?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                            <!-- <a href="#"><i class="fa-brands fa-pinterest-p"></i></a> -->
+                            <a href="http://www.youtube.com/@JigneshPatel-jh5ii"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <!-- <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> -->
+                            <!-- <a href="#"><i class="fa-brands fa-google-plus-g"></i></a> -->
+                            <!-- <a href="#"><i class="fa-brands fa-tumblr"></i></a> -->
+                            <!-- <a href="#"><i class="fa-brands fa-vimeo-v"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>MAP</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps?q=66,Abhishrip Industrial Park,Odhav,Ahmedabad&output=embed"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Copyright 2026 Yash Tools. All Rights Reserved.</p>
+                <p>Website Design & SEO Company in Ahmedabad by WIT Solution</p>
+            </div>
+        </footer>
+    </section>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>
