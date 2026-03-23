@@ -1782,157 +1782,79 @@ li {
     gap: 20px;
 }
 
+/* ============================================
+   MEDIA QUERIES - Responsive Design
+   Add this at the END of your style.css file
+   ============================================ */
 
-/* =============================================
-   MEDIA QUERIES
-   ============================================= */
-
-/* Large screens (max 1024px) */
+/* ── Large Tablet (max 1024px) ─────────────────── */
 @media (max-width: 1024px) {
-    .product-wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .main-product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Tablet (max 992px) */
-@media (max-width: 992px) {
-    .product-page-main {
-        flex-direction: column;
-    }
-
-    .second,
-    .sidebar {
-        width: 100%;
-        order: unset;
-        flex: none;
-    }
-
-    .main-product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .spec-table {
-        display: block;
-        overflow-x: auto;
+    .container {
+        padding: 0 20px;
     }
 
     .main-content-wrapper {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .left-content {
+        flex: 1;
+    }
+
+    .sidebar {
+        width: 260px;
+        flex-shrink: 0;
     }
 
     .product-header {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .about-page-container {
-        flex-direction: column;
-    }
-
-    .about-left,
-    .about-right {
+    .image-box {
         width: 100%;
+        max-width: 350px;
     }
 
-    .header-flex {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .contact-page-container {
-        flex-direction: column;
-    }
-
-    .contact-left,
-    .contact-right {
+    .info-box {
         width: 100%;
-    }
-
-    .p-card {
-        min-width: calc(50% - 10px);
     }
 
     .related-card {
-        min-width: calc(50% - 10px);
-    }
-}
-
-/* Tablet/Mobile (max 768px) */
-@media (max-width: 768px) {
-
-    .header-main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-right-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .main-menu {
-        display: none;
-        width: 100%;
-        background: rgb(243 177 176);
-    }
-
-    .main-menu ul {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .main-menu ul li {
-        padding: 10px 0;
-    }
-
-    .main-menu ul li a {
-        font-size: 16px;
-    }
-
-    .main-menu ul :hover {
-        background-color: red;
-    }
-
-    .main-menu.active {
-        display: block;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .product-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        min-width: 180px;
     }
 
     .footer-container {
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
-    .main-title {
-        font-size: 24px;
+    .footer-col:last-child {
+        grid-column: 1 / -1;
     }
+}
 
-    .desc-content p {
-        font-size: 15px;
-        text-align: left;
-    }
+/* ── Tablet (max 768px) ────────────────────────── */
+@media (max-width: 768px) {
 
+    /* Header */
     .page-header h1 {
         font-size: 22px;
-        text-align: center;
     }
 
+    /* Layout: Stack sidebar below content */
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    /* Product Header */
     .product-header {
         flex-direction: column;
         align-items: center;
@@ -1940,114 +1862,296 @@ li {
     }
 
     .image-box {
-        flex: 0 0 100%;
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .info-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-box h1 {
+        font-size: 20px;
+    }
+
+    .info-box p a {
+        display: inline-block;
+        margin: 2px;
     }
 
     .social-links {
         justify-content: center;
-    }
-
-    .sidebar {
-        order: 2;
-        width: 100%;
-    }
-
-    .product-content {
-        order: 1;
-    }
-
-    .main-product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .main-content-wrapper {
-        flex-direction: column;
-    }
-
-    .left-content,
-    .sidebar {
-        width: 100%;
-    }
-
-    .info-box {
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    .spec-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .tabs {
-        flex-direction: column;
-    }
-
-    .tab-btn {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .slider-track {
         display: flex;
-        overflow-x: auto;
         gap: 10px;
     }
 
-    .related-card {
-        min-width: 200px;
-    }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Mobile (max 600px) */
-@media (max-width: 600px) {
-    .main-product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .p-card {
-        min-width: 100%;
-    }
-
-    .related-card {
-        min-width: 100%;
-    }
-}
-
-/* Tablet only (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    .main-content-wrapper {
-        flex-direction: column;
-    }
-
-    .left-content,
-    .sidebar {
-        width: 100%;
-    }
-
-    .product-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-box img {
-        width: 70%;
-    }
-
-    .related-card {
-        min-width: 250px;
-    }
-
-    .footer-container {
+    /* Tabs */
+    .tabs {
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 6px;
+    }
+
+    .tab-btn {
+        flex: 1;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    /* Specification Table */
+    .spec-table {
+        width: 100%;
+        font-size: 13px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .spec-table th,
+    .spec-table td {
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
+
+    /* Sidebar contact form */
+    .sidebar-box {
+        padding: 16px;
+    }
+
+    .sidebar-form input,
+    .sidebar-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Related Products Slider */
+    .related-card {
+        min-width: 150px;
+    }
+
+    .related-card h4 {
+        font-size: 13px;
+    }
+
+    /* Section header */
+    .section-header h3 {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-col:last-child {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Category Sidebar */
+    .category-list {
+        padding: 0;
+    }
+
+    .submenu li a {
+        font-size: 13px;
+    }
+}
+
+/* ── Mobile (max 480px) ────────────────────────── */
+@media (max-width: 480px) {
+
+    /* Container full width */
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Page header */
+    .page-header {
+        padding: 20px 0;
+    }
+
+    .page-header h1 {
+        font-size: 18px;
+    }
+
+    /* Product section */
+    .product-page-main {
+        padding: 16px 0;
+    }
+
+    .image-box {
+        max-width: 260px;
+    }
+
+    .info-box h1 {
+        font-size: 17px;
+    }
+
+    .info-box p {
+        font-size: 13px;
+    }
+
+    /* Description */
+    #desc h3 {
+        font-size: 16px;
+    }
+
+    #desc p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* Spec table: horizontal scroll */
+    .spec-table {
+        font-size: 12px;
+    }
+
+    .spec-table th,
+    .spec-table td {
+        padding: 5px 6px;
+    }
+
+    /* Tabs */
+    .tab-btn {
+        font-size: 13px;
+        padding: 7px 8px;
+    }
+
+    /* Related Products */
+    .related-card {
+        min-width: 130px;
+    }
+
+    .related-card .p-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .related-card h4 {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .read-btn {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    /* Slider nav buttons */
+    .slider-nav i {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    /* Footer */
+    .get-in-touch {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .footer-col h3 {
+        font-size: 15px;
+    }
+
+    .footer-col ul li a,
+    .contact-info p {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+
+    /* Modal form */
+    .modal-content {
+        width: 95%;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .modal-content h3 {
+        font-size: 16px;
+    }
+
+    .modal-content p {
+        font-size: 13px;
+    }
+
+    .send-btn,
+    .submit-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Sidebar category list */
+    .dropdown-header a {
+        font-size: 13px;
+    }
+
+    .submenu li a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    /* Map in footer */
+    .map-container iframe {
+        height: 180px;
+    }
+
+    /* Social icons */
+    .social-icons a {
+        font-size: 16px;
+    }
+}
+
+/* ── Very Small Screens (max 360px) ───────────── */
+@media (max-width: 360px) {
+
+    .page-header h1 {
+        font-size: 16px;
+    }
+
+    .info-box h1 {
+        font-size: 15px;
+    }
+
+    .image-box {
+        max-width: 220px;
+    }
+
+    .related-card {
+        min-width: 115px;
+    }
+
+    .spec-table {
+        font-size: 11px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
     }
 }
